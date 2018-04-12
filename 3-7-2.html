@@ -13,12 +13,12 @@
                 this.color = color;
                 this.length = length;
                 this.draw = function(){
-                    this.length -=0.2;
+                    this.length -=1;
                 }
             }
-            var penR = new Pen("red",5);
-            var penG = new Pen("green",15)
-            var penB = new Pen("blue",8)
+            var penR = new Pen("red",50);
+            var penG = new Pen("green",150)
+            var penB = new Pen("blue",80)
             var pen = "penR"
 
             function stroke(){
@@ -44,7 +44,7 @@
         </p>
         <p>
             鉛筆の色は<span id="color"></span>
-            長さは<span id="length"></span>cm
+            長さは<span id="length"></span>mm
         </p>
     </body>
 </html>
