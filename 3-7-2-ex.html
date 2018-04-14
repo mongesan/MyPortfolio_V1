@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            h1{
+                font-family:monospace;
+                background-color:rgb(255, 87, 87);
+                color:white;
+                width:10cm;
+            }
+            h3{
+                color:white
+            }
+        </style>
+        <script>
+            function Pen(color, length){
+                this.color = color;
+                this.length = length;
+                this.draw = function(){
+                    this.length -=1;
+                }
+            }
+            var penR = new Pen("red",100);
+            var penG = new Pen("green",150)
+            var penB = new Pen("blue",80)
+            var pen = "penR"
+
+            function stroke(){
+                pen.draw();
+                var pencil = document.getElementById("pencil");
+                pencil.style.width = pen.length +"mm";
+                pencil.style.backgroundColor = pen.color;
+                pencil.textContent = "色=" + pen.color + "長さ=" + pen.length + "mm";
+            }
+
+            function pickR(){ pen = penR;}
+            function pickG(){ pen = penG;}
+            function pickB(){ pen = penB;}
+            </script>
+    </head>
+    
+    <body style="background-color: rgb(44, 44, 44)">
+        <h1>Object/Mezzott - EX</h1>
+        <noscript>javascriptを有効にしでくださし</noscript>
+        <h3>Alt+Bで書けるよ</h3>
+        <p>
+        <button onclick="pickR()">Choose red</button>
+        <button onclick="pickG()">Choose green</button>
+        <button onclick="pickB()">Choose blue</button>
+        <button onclick="stroke()" accesskey="b">書く(B)</button>
+        </p>
+        <p id="pencil" style="background-color:red; width:5cm; color:white;"></p>
+    </body>
+</html>
