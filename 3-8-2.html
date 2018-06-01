@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            #luck{
+                color:red;
+            }
+        </style>
+        <script>
+            function random(){
+                var t = Math.floor(Math.random()*500+310);                
+                document.getElementById("value").textContent = t;
+                if(t == 810){
+                    var r = "Very Lucky! Kusai!!!!!!!!!!!!!!!!";
+                }else{
+                    var r = "";
+                }
+                document.getElementById("luck").textContent = r;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="random()">Random:<span id="value"></span></button>
+        <h1><span id="luck"></span></h1>
+    </body>
+</html>
