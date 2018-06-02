@@ -1,0 +1,22 @@
+h3,h2,h1{
+    color:white;
+}
+h2{
+  color:#43a2af;
+}
+.content{
+  background-color: #f2f2f2;
+  padding: 12px;
+  margin: 8px;
+}
+.prfimg{
+  border: 8px solid #fff;
+   border-radius: 12px;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+.maincnt{
+  margin: 36px;
+}
