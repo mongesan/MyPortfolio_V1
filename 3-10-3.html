@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            window.onload = function(){
+                document.getElementById("Yes").onclick = yeshandler;
+                document.getElementById("No").onclick = nohandler;
+                var stat = document.getElementById("stat");
+                stat.style.fontStyle = "italic";
+                stat.style.fontFamily = "Segoe UI";
+                stat.style.boxShadow = "10px 10px 10px rgba(200, 200, 200, 0.6)";
+            }
+            function yeshandler(e){
+                document.getElementById("stat").textContent = "Yes was chosen"
+                stat.style.color = "red";
+                console.log("Yes was chosen");
+            }
+
+            function nohandler(e){
+                document.getElementById("stat").textContent = "No was chosen"
+                stat.style.color = "blue";
+                console.log("No was chosen");
+            }
+        </script>
+    </head>
+    <body>
+        <button id="Yes">yes</button>
+        <button id="No">no</button>
+        <h2 id="stat"></h2>
+    </body>
+</html>
