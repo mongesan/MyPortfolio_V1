@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: gray;
+                color:dodgerblue;
+            }
+            p{
+                background:rgb(60,60,60);
+                width:450px; height:450px;
+                padding:20px; font-size:24px;
+                border: inset 10px #00ffc8;
+                border-top-right-radius: 100px;
+                border-bottom-left-radius: 100px;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                document.getElementById("area").onmousemove = mymousemove;
+            }
+            function mymousemove(e){
+                document.getElementById("s0").textContent =
+                    "clientX="+ e.clientX + ",clientY=" + e.clientY;
+                document.getElementById("s1").textContent =
+                    "pageX="+ e.pageX + ",pageY" + e.pageY;
+                document.getElementById("s2").textContent =
+                    "screenX="+e.screenX+",screenY="+e.screenY;
+                var target = e.target || e.srcElement,
+                    rect = target.getBoundingClientRect(),
+                    offsetX = e.clientX - rect.left,
+                    offsetY = e.clientY - rect.top;
+                document.getElementById("s3").textContent =
+                    "offsetX=" + offsetX + ",offsetY=" + offsetY; 
+            }
+        </script>
+    </head>
+    <body>
+        <strong>マウスイベントのプロパティ</strong>
+            <p id="area">
+                <span id="s0"></span><br>
+                <span id="s1"></span><br>
+                <span id="s2"></span><br>
+                <span id="s3"></span><br>
+            </p>
+    </body>
+</html>
