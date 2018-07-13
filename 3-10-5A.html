@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .card{
+                width: 100px;
+                height: 100px;
+                border: 5px solid dodgerblue;
+                border-radius: 60px;
+                text-align: center;
+                font-size: 65px;
+                color:lightgreen;
+                background-color: rgb(130, 130, 130);
+                box-shadow:#1e8fff8f 10px 10px;
+            }
+        </style>
+        <script>
+            var strike = Math.floor(Math.random()*3);
+            window.onload = function(){
+                document.getElementById("card0").onclick = myhandler0;
+                document.getElementById("card1").onclick = myhandler1;
+                document.getElementById("card2").onclick = myhandler2;
+                document.getElementById("shuffle").onclick = shuffle;
+            }
+            function myhandler0(e){
+                if(strike == 0){
+                    document.getElementById("card0").textContent = "〇";
+                }
+            }
+            function myhandler1(e){
+                if(strike == 1){
+                    document.getElementById("card1").textContent = "〇";
+                }
+            }
+            function myhandler2(e){
+                if(strike == 2){
+                    document.getElementById("card2").textContent = "〇";
+                }
+            }
+            function shuffle(e){
+                strike =Math.floor(Math.random()*3);
+                document.getElementById("card0").textContent = "";
+                document.getElementById("card1").textContent = "";
+                document.getElementById("card2").textContent = "";
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="deck">
+            <table>
+                    <tr>
+                        <td class="card" id="card0"></td>
+                        <td class="card" id="card1"></td>
+                        <td class="card" id="card2"></td>
+                    </tr>
+            </table>
+            <button id="shuffle">Shuffle</button>
+        </div>
+    </body>
+</html>
