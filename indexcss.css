@@ -11,9 +11,20 @@ span.page{
     color:red;
     font-size:15px;
     font-style:italic;
-    border: 3px dotted black;
 }
 address{
     color:white;
     box-shadow: 10px 10px 10px rgba(200, 200, 200, 0.6);
+}
+body{
+    background-color: black;
+}
+p{
+    color:lightskyblue;
+}
+#red{
+    color:rgb(238, 151, 151);
+}
+strong{
+    color:white;
 }
