@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function add(a,b){
+                return a + b;
+            }
+            console.log("return a+b function addを宣言")
+
+            function mul(a,b){
+                return a * b;
+            }
+            console.log("return a*b function mulを宣言")
+
+            var calculator = add;
+            var x = calculator(113704,810); //x = 114514
+            console.log("113704+810="+x);
+            calculator = mul;
+            var y = calculator(7,133); //y = 931
+            console.log("7*133="+y);
+
+            var calculator = function(a,b){
+                return a/b;
+            }
+            var z = calculator(114514,31);
+            console.log("114514/31="+z);
+
+            function Person(name,energy){
+                this.name = name;
+                this.energy = energy;
+                this.run = function(){this.energy -= 121; console.log(name+" ran. "+ this.energy + "energy")}
+                this.sayhello = function(){console.log("Hi! "+this.name);}
+            }
+
+            var Kusai_People1 = new Person("Tadokoro","931");
+            Kusai_People1.run();
+            Kusai_People1.sayhello();
+
+        </script>
+    </head>
+    <body>
+        コンソールを見よう
+        <noscript>もしやjavascript入ってない?</noscript>
+    </body>
+</html>
