@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            table td{
+                padding: 15px 15px;
+                background-color: azure;
+                border: dashed 1px rgb(0, 128, 255);
+            }
+            table{
+                border-collapse: collapse;
+                border: solid 2px rgb(72, 72, 255);
+                text-align: center;
+            }
+        </style>
+        <script>
+            var data = [1,3,5,8,10,14,149]
+            function _foreach(){
+                data.forEach(function(e,i){
+                    delete data[3];
+                    console.log("3を欠番にしてdata.forEachで["+i+"]="+e);
+                });
+            }
+            function _for(){
+                for(var i = 0 ; i < data.length ; i++){
+                    delete data[3];
+                    console.log("3を欠番にしてforで["+ i +"]="+data[i]);
+                }
+            }
+            function _every(){
+                var r0 = data.every(function(e){return e<6});
+                var r1 = data.every(function(e){return e<10});
+                var r2 = data.every(function(e){return e>0});
+                console.log("every ->r0="+r0);
+                console.log("r1="+r1);
+                console.log("r2="+r2);
+            }
+            function _some(){
+                var r3 = data.some(function(e){return e<6});
+                var r4 = data.some(function(e){return e>7});
+                var r5 = data.some(function(e){return e>6});
+                console.log("some ->r3="+r3);
+                console.log("r4="+r4);
+                console.log("r5="+r5);
+            }
+            function _filter(){
+                var r6 = data.filter(function(e){return e%2 == 0});
+                var r7 = data.filter(function(e){return e%2 == 1});
+                var r8 = data.filter(function(e){return e <=4});
+                console.log("filter ->r6="+r6);
+                console.log("r7="+r7);
+                console.log("r8="+r8);
+            }
+            function _sort(){
+                data.sort(function(a,b){return a - b;})
+                var r9 = data;
+                console.log("sort ->r9="+r9);
+                data.sort(function(a,b){return b - a;})
+                var r10 = data;
+                console.log("r10="+r10);
+                function mysort(a,b){
+                    return a - b;
+                }
+                data.sort(mysort);
+                data;
+                var r11 = data;
+                console.log("r11="+r11);
+                var datax = ["れんが","たぬき","とかちゃ","いんむおう","ひさもとまさみ","ウ　ン　チ　ー　コ　ン　グ","KRSW"];
+                console.log("dataxの文字列を"+datax+"に変更");
+                datax.sort(function(a,b){return a.length - b.length})
+                var r12 = datax;
+                console.log("文字列の長さの短い順 r12="+r12);
+                //the last "heisei" 8.10
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2>8.10記念</h2>
+        <h2>Arrayオブジェクトと野獣に感謝</h2>
+        <h2>(コンソール見ろ)</h2>        
+            <table>
+                <tr>
+                    <td><button onclick="_foreach()">ForEach</button></td>
+                    <td><button onclick="_for()">for</button></td>
+                    <td><button onclick="_every()">every</button></td>
+                </tr>
+                <tr>
+                    <td><button oncilck="_some()">some</button></td>
+                    <td><button onclick="_filter()">filter</button></td>
+                    <td><button onclick="_sort()">sort</button></td>
+                </tr>
+            </table>
+    </body>
+</html>
