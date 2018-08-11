@@ -5,6 +5,7 @@
         <script>
             window.onkeydown = function(e){
                 document.getElementById("result").textContent = "keydown:" + e.keyCode;
+                document.getElementById("sound").currentTime = 0;
                 document.getElementById("sound").play();
             }
         </script>
