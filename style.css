@@ -2,3 +2,7 @@ html{
     background-color: black;
     color:white;
 }
+h1.coming{
+    text-align: center;
+    vertical-align: middle;
+}
