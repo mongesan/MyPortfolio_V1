@@ -1,5 +1,6 @@
 html{
     background-color: black;
+    user-select: none;
 }
 h1.coming{
     color: white;
