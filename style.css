@@ -10,18 +10,18 @@ html{
     animation: Test2 3s -0.5s;
     animation-fill-mode: forwards;
 }
-.coming span:nth-child(2){ animation-delay: 0.1s}
-.coming span:nth-child(3) { animation-delay: 0.2s}
-.coming span:nth-child(4) { animation-delay: 0.3s}
-.coming span:nth-child(5) { animation-delay: 0.4s}
-.coming span:nth-child(6) { animation-delay: 0.5s}
-.coming span:nth-child(7) { animation-delay: 0.6s}
-.coming span:nth-child(8) { animation-delay: 0.7s}
-.coming span:nth-child(9) { animation-delay: 0.8s}
-.coming span:nth-child(10) { animation-delay: 0.9s}
-.coming span:nth-child(11) { animation-delay: 1s}
-.coming span:nth-child(12) { animation-delay: 1.1s}
-.coming span:nth-child(13) { animation-delay: 1.2s}
+.coming span:nth-child(2){ animation-delay: 0.1s;}
+.coming span:nth-child(3) { animation-delay: 0.2s;}
+.coming span:nth-child(4) { animation-delay: 0.3s;}
+.coming span:nth-child(5) { animation-delay: 0.4s;}
+.coming span:nth-child(6) { animation-delay: 0.5s;}
+.coming span:nth-child(7) { animation-delay: 0.6s;}
+.coming span:nth-child(8) { animation-delay: 0.7s;}
+.coming span:nth-child(9) { animation-delay: 0.8s;}
+.coming span:nth-child(10) { animation-delay: 0.9s;}
+.coming span:nth-child(11) { animation-delay: 1s;}
+.coming span:nth-child(12) { animation-delay: 1.1s;}
+.coming span:nth-child(13) { animation-delay: 1.2s;}
 /*これ短く出来ないかな....*/
 @keyframes Test2{
     0% {transform: translateY(-200px); 
