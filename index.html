@@ -15,22 +15,14 @@
 
             gtag('config', 'UA-138168390-1');
         </script>
-        <!--moji-->
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript">
-        $(function () {
-                $(".coming").children().addBack().contents().each(function () {
-                    if (this.nodeType == 3) {
-                        $(this).replaceWith($(this).text().replace(/(\S)/g, "<span>$&</span>"));
-                    }
-                });
-            });
-        </script>
         <!--フォント-->
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     </head>
     <body>
         //test_animation2!
         <h1 class="coming">Coming soon...</h1>
+
+        <!-- これでcoming soonを制御 -->
+        <script src="./main.js"></script>
     </body>
 </html>
