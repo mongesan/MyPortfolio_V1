@@ -3,9 +3,8 @@
     const coming = document.getElementsByClassName('coming')[0];
     coming.style.letterSpacing = '3px';
 
-    coming.innerText.split('').map((char, index) => {
-      if (index === 0) coming.innerText = '';
-
+    const text = 'Coming soon...';
+    text.split('').map((char, index) => {
       const span = document.createElement('span');
       span.innerText = char;
 
