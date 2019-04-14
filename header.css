@@ -2,7 +2,7 @@ h1.name{
     color:black;
     font-size: 50px;
     text-align: center;
-    font-family: 'Audiowide',cursive;
+    font-family: 'Megrim',cursive;
     opacity: 0;
     animation: name 1200ms 4800ms ease-in-out forwards;
     position: relative;
