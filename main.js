@@ -13,10 +13,15 @@
         opacity: 0;
         bottom: 100px;
         position: relative;
-        animation: Test2 1200ms ${300 + index * 80}ms ease-in-out forwards
+        animation: Test2 1200ms ${300 + index * 80}ms ease-in-out forwards;
       `;
-
       coming.appendChild(span);
     });
+    // アニメーションその2
+    coming.style = `
+        position: relative;
+        animation: Test3 1200ms ${1300 + text.length * 80}ms ease-in-out forwards;
+      `
+    //contribute by @JPNYKW !
   };
 })();
