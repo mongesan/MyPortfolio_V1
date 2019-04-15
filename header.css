@@ -1,8 +1,8 @@
+
 h1.name{
     color:black;
     font-size: 60px;
     text-align: center;
-    font-family: 'Megrim',cursive;
     opacity: 0;
     animation: name 1200ms 4800ms ease-in-out forwards;
     position: relative;
@@ -11,6 +11,7 @@ div.header{
     background-color: white;
     height:0;
     animation: curtain 1200ms 4400ms ease-in-out forwards;
+    font-family: 'Megrim',cursive;
     position: relative;
 }
 
@@ -34,11 +35,27 @@ h1.name::before {
 }
 
 div.menu{
-    background-color:rgb(200, 200, 255);
+    background-color:rgb(100, 100, 255);
     opacity: 0;
+    transform-origin: 50%;
     height: 80px;
+    font-family: 'Poiret One',cursive;
     animation: menu 1200ms 5600ms ease-in-out forwards;
 }
+div.menu div.anker{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+
+}
+div.menu div.anker a{
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 0px 50px;
+}
+
+
+
 @keyframes line{
     0% {
         opacity: 1;
@@ -77,11 +94,11 @@ div.menu{
 }
 @keyframes menu{
     0%{
-        opacity: 0.5;
-        width:0%;
+        opacity: 1;
+        transform: scaleX(0);
     }
     100%{
         opacity: 1;
-        width:100%;
+        transform: scaleX(1);
     }
 }
