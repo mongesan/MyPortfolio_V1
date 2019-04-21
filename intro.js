@@ -22,6 +22,6 @@
         position: relative;
         animation: feedout 1200ms ${1300 + text.length * 80}ms ease-in-out forwards;
       `
-    //contribute by @JPNYKW !
+    //contribute by @JPNYKW !!
   };
 })();

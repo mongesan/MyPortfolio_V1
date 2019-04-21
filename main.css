@@ -1,3 +1,93 @@
-body,h1,div{
-    margin:0
+body,h1,div,td,tr,tbody{
+    padding:0;
+    margin:0;
+}
+div.main{
+    background: repeating-linear-gradient(45deg, #091528, #091528 10px, #050520 0, #050520 50px);
+    opacity: 0;
+    animation: mainc 2000ms 5600ms ease forwards;
+}
+div.news{
+    height:319px;
+    overflow: hidden;
+}
+table{
+    margin: 40px;
+}
+td.info{
+    font-family: 'Megrim',cursive;
+    text-align: center;
+    background-color:white;
+    color:black;
+    font-size:60px;
+    width:240px;
+    height:240px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    opacity: 0;
+    animation: news 1200ms 5600ms ease-in-out forwards;
+}
+
+td.info_con{
+    font-family: 'M PLUS 1p',sans-serif;
+    color:white;
+    padding-left: 50px;
+    vertical-align: top;
+}
+div.line{
+    border-bottom: solid 1px white;
+    width:900px;
+}
+
+a{
+    color:#808080;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+a:hover{
+    color: #ffffff;
+    transition: color .3s linear;
+}
+a#twitter{
+    color:#00acee;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+a#twitter:hover {
+    color: #ffffff;
+    transition: color .3s linear;
+}
+
+
+@keyframes news{
+    0%{opacity: 0;
+    transform: scale(0);}
+    50%{opacity: 1;}
+    100%{opacity: 1;
+    transform: scale(1)}
+}
+@keyframes hover1{
+        0% {
+            transform: scale(100%);
+        }
+
+        50% {
+
+        }
+
+        100% {
+            transform: scale(130%);
+        }
+}
+@keyframes mainc{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
