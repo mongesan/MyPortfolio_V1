@@ -1,4 +1,4 @@
 # mongesan.github.io
 connichiha~  
-Hello world!
-this is mongesan.(tabun.)
+Hello world!  
+This is mongesan.(tabun.)

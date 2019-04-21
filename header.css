@@ -1,11 +1,12 @@
 
 h1.name{
-    color:black;
+    color:#000000;
     font-size: 60px;
     text-align: center;
     opacity: 0;
     animation: name 1200ms 4800ms ease-in-out forwards;
     position: relative;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
 }
 div.header{
     background-color: white;
@@ -40,19 +41,27 @@ div.menu{
     transform-origin: 50%;
     height: 80px;
     font-family: 'Poiret One',cursive;
+    display: flex;
     animation: menu 1200ms 5600ms ease-in-out forwards;
 }
 div.menu div.anker{
     text-align: center;
     font-size: 50px;
-    padding-top: 10px;
-
+    margin: auto;
 }
 div.menu div.anker a{
-    color: #F2F2F2;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(242, 242, 242);
     text-decoration: none;
+    opacity: 0;
     padding: 0px 50px;
 }
+
+.about{animation: anker 800ms 7000ms ease-in-out forwards;}
+.projects {animation: anker 800ms 7100ms ease-in-out forwards;}
+.history {animation: anker 800ms 7200ms ease-in-out forwards;}
+.contact {animation: anker 800ms 7300ms ease-in-out forwards;}
 
 
 
@@ -100,5 +109,20 @@ div.menu div.anker a{
     100%{
         opacity: 1;
         transform: scaleX(1);
+    }
+}
+@keyframes anker{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        text-shadow: 0px 0px 30px rgb(255, 255, 255, 1);
     }
 }
