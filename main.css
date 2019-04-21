@@ -17,8 +17,8 @@ table{
 td.info{
     font-family: 'Megrim',cursive;
     text-align: center;
-    background-color:white;
-    color:black;
+    background-color:#ffffff;
+    color:#000000;
     font-size:60px;
     width:240px;
     height:240px;
@@ -30,23 +30,30 @@ td.info{
     border-radius: 40px;
     opacity: 0;
     animation: news 1200ms 5600ms ease-in-out forwards;
+    transition: color .2s linear;
+}
+td.info:hover{
+    color: #00000090;
+    transition: color .2s ease-in-out;
 }
 
 td.info_con{
     font-family: 'M PLUS 1p',sans-serif;
-    color:white;
+    color:#ffffff;
     padding-left: 50px;
     vertical-align: top;
 }
 div.line{
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #ffffff;
     width:900px;
 }
 
 a{
+    pointer-events: none;
     color:#808080;
     text-decoration: none;
     transition: color .2s linear;
+    animation: dont_touch 0ms 6000ms ease-in-out forwards;
 }
 a:hover{
     color: #ffffff;
@@ -90,4 +97,16 @@ a#twitter:hover {
     100%{
         opacity: 1;
     }
+}
+@keyframes dont_touch{
+    0% {
+        pointer-events: all;
+    }
+    100% {
+        pointer-events: all;
+    }
+}
+@keyframes touch{
+    0%{transform: scale(1);}
+    100%{transform: scale(2);}
 }
