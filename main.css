@@ -1,14 +1,22 @@
+body{
+    overflow-y: scroll;
+}
 body,h1,div,td,tr,tbody{
     padding:0;
     margin:0;
 }
-div.main{
+div.news{
+    height:319px;
     background: repeating-linear-gradient(45deg, #091528, #091528 10px, #050520 0, #050520 50px);
     opacity: 0;
     animation: mainc 2000ms 5600ms ease forwards;
+    overflow: hidden;
 }
-div.news{
-    height:319px;
+div.about{
+    background: repeating-linear-gradient(135deg, #170f1f, #170f1f 10px, #110315 0, #110315 50px);
+    opacity: 0;
+    animation: mainc 2000ms 5600ms ease forwards;
+    height: 301px;
     overflow: hidden;
 }
 table{
@@ -77,19 +85,6 @@ a#twitter:hover {
     100%{opacity: 1;
     transform: scale(1)}
 }
-@keyframes hover1{
-        0% {
-            transform: scale(100%);
-        }
-
-        50% {
-
-        }
-
-        100% {
-            transform: scale(130%);
-        }
-}
 @keyframes mainc{
     0%{
         opacity: 0;
@@ -105,8 +100,4 @@ a#twitter:hover {
     100% {
         pointer-events: all;
     }
-}
-@keyframes touch{
-    0%{transform: scale(1);}
-    100%{transform: scale(2);}
 }
