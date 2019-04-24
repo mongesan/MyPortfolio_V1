@@ -1,9 +1,9 @@
-body{
-    overflow-y: scroll;
-}
 body,h1,div,td,tr,tbody{
     padding:0;
     margin:0;
+}
+div.main{
+    display: none;
 }
 div.news{
     height:319px;
@@ -13,11 +13,14 @@ div.news{
     overflow: hidden;
 }
 div.about{
-    background: repeating-linear-gradient(135deg, #170f1f, #170f1f 10px, #110315 0, #110315 50px);
+    background: repeating-linear-gradient(135deg, #191122, #191122 10px, #110315 0, #110315 50px);
     opacity: 0;
-    animation: mainc 2000ms 5600ms ease forwards;
+    animation: mainc 2000ms 5800ms ease forwards;
     height: 301px;
     overflow: hidden;
+}
+.right{
+    float: right;
 }
 table{
     margin: 40px;
@@ -25,8 +28,6 @@ table{
 td.info{
     font-family: 'Megrim',cursive;
     text-align: center;
-    background-color:#ffffff;
-    color:#000000;
     font-size:60px;
     width:240px;
     height:240px;
@@ -37,11 +38,24 @@ td.info{
     right: 0;
     border-radius: 40px;
     opacity: 0;
+    background-color:#ffffff;
     animation: news 1200ms 5600ms ease-in-out forwards;
     transition: color .2s linear;
 }
-td.info:hover{
+td#update{
+    color:#000000;
+    text-shadow:0px 0px 10px #00000094;
+}
+td#about{
+    color:#2f88fc;
+    text-shadow:0px 0px 10px #2f88fc94;
+}
+td.info#update:hover{
     color: #00000090;
+    transition: color .2s ease-in-out;
+}
+td.info#about:hover {
+    color: #2f88fc90;
     transition: color .2s ease-in-out;
 }
 
@@ -76,7 +90,6 @@ a#twitter:hover {
     color: #ffffff;
     transition: color .3s linear;
 }
-
 
 @keyframes news{
     0%{opacity: 0;

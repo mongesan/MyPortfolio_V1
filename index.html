@@ -29,7 +29,7 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     </head>
-    <body>
+    <body id="body"> 
         <div class="Intro">
         //test_animation2!
         <h1 class="coming"></h1>
@@ -52,7 +52,7 @@
             <div class="news">
                     <table>
                         <tr>
-                            <td class="info">-00-<br>updates</td>
+                            <td class="info" id="update">-00-<br>updates</td>
                             <td class="info_con">
                                 <h1>近況報告</h1>
                                 <div class="line"></div>
@@ -66,15 +66,18 @@
                     </table>
             </div>
             <div class="about">
-                <tr>
-                    <td class="info">-01-<br>Abouts</td>
-                    <td class="info_con"></td>
-                </tr>
+                <table class="right">
+                    <tr>
+                        <td class="info_con"></td>
+                        <td class="info" id="about">-01-<br>Abouts</td>
+                    </tr>
+                </table>
             </div>
             <div class="projects"></div>
             <div class="history"></div>
             <div class="contact"></div>
         </div>
+        <script src="main.js"></script>
         <script src="intro.js"></script>
     </body>
 </html>
