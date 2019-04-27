@@ -12,4 +12,4 @@ function openId() {
     };
 })();
 
-setTimeout("openId()", 3000)
+setTimeout("openId()", 3600)
