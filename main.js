@@ -5,11 +5,10 @@ function openId() {
         openElement[i].style.display = "block";
     }
 }
-
+document.ondragstart = function () { return false; };
 (() => {
     onload = () => {
         
     };
 })();
-
 setTimeout("openId()", 3600)
