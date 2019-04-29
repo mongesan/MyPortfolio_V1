@@ -6,10 +6,10 @@ h1.name{
     opacity: 0;
     animation: name 1200ms 4800ms ease-in-out forwards;
     position: relative;
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
+    text-shadow: 0px 0px 30px #000000bf;
 }
 div.header{
-    background-color: white;
+    background-color: #ffffff;
     height:0;
     animation: curtain 1200ms 4400ms ease-in-out forwards;
     font-family: 'Megrim',cursive;
@@ -20,7 +20,7 @@ h1.name::after {
     opacity:0;
     content: '';
     display: block;
-    background: rgb(70, 70, 255);
+    background: #4646ff;
     height: 2px;
     animation: line 3600ms 5600ms ease-in forwards;
 }
@@ -29,14 +29,14 @@ h1.name::before {
     opacity: 0;
     content: '';
     display: block;
-    background: rgb(70, 70, 255);
+    background: #4646ff;
     height: 2px;
     margin-left: auto;
     animation: line 3600ms 5600ms ease-in forwards;
 }
 
 div.menu{
-    background-color:rgb(100, 100, 255);
+    background-color:#6464ff;
     opacity: 0;
     transform-origin: 50%;
     height: 80px;
@@ -45,6 +45,7 @@ div.menu{
     animation: menu 1200ms 5600ms ease-in-out forwards;
 }
 div.menu div.anker{
+    pointer-events: none;
     text-align: center;
     font-size: 50px;
     margin: auto;
@@ -52,12 +53,17 @@ div.menu div.anker{
 div.menu div.anker a{
     text-align: center;
     font-size: 50px;
-    color: rgb(242, 242, 242);
+    color: #f2f2f2;
     text-decoration: none;
     opacity: 0;
     padding: 0px 50px;
+    text-shadow: 0px 0px 0px #ffffff;
+    transition: text-shadow .4s ease-in-out;
 }
-
+div.menu div.anker a:hover{
+    text-shadow: 0px 0px 30px #ffffff;
+    transition: text-shadow .4s ease-in-out;
+}
 .about{animation: anker 800ms 7000ms ease-in-out forwards;}
 .projects {animation: anker 800ms 7100ms ease-in-out forwards;}
 .history {animation: anker 800ms 7200ms ease-in-out forwards;}
@@ -113,16 +119,19 @@ div.menu div.anker a{
 }
 @keyframes anker{
     0%{
+        pointer-events: all;
         opacity: 0;
     }
     25%{
-        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+        text-shadow: 0px 0px 30px #ffffff00;
     }
     75%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        text-shadow: 0px 0px 30px rgb(255, 255, 255, 1);
+        text-shadow: 0px 0px 30px #ffffff;
+        pointer-events: all;
+        
     }
 }

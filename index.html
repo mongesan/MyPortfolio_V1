@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!--UPDATE 0.8-->
+    <!--UPDATE 0.9-->
     <head>
         <meta charset="UTF-8">
         <title>S.S/Monge</title>
@@ -29,7 +29,7 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     </head>
-    <body>
+    <body id="body"> 
         <div class="Intro">
         //test_animation2!
         <h1 class="coming"></h1>
@@ -51,25 +51,43 @@
         <div class="main">
             <div class="news">
                     <table>
-                        <tr class="parent">
-                            <td class="info">-00-<br>updates</td>
-                            <td class="info_con">
-                                <h1>近況報告</h1>
+                        <tr>
+                            <td class="info" id="update">-00-<br>updates</td>
+                            <td class="info_con1">
+                                <h1>Updates</h1>
                                 <div class="line"></div>
                                 <p>2019/04/21 <i class="fab fa-github"></i><a href="https://github.com/mongesan/mongesan.github.io" target="blank">Update 0.8</a> "updates!"</p>
                                 <p>2019/04/14 <a href="https://ekoda-scratch.connpass.com/" target="_blank">第19回Ecoder's Tokyo</a>に参加、
-                                    <i class="fab fa-twitter"></i><a href="https://twitter.com/JPNYKW" id="twitter" target="_blank">JPNYKW氏</a>から技術を学ぶ</p>
+                                    <i class="fab fa-twitter"></i><a href="https://twitter.com/JPNYKW" id="twitter" target="blank">JPNYKW氏</a>から技術を学ぶ</p>
                                 <p>2019/04/11 comingsoon...を作りここで公開</p>
                                 <p>2019/04/08 中学二年生に進級</p>
                             </td>
                         </tr>
                     </table>
             </div>
-            <div class="about"></div>
+            <div class="about">
+                <table class="right">
+                    <tr>
+                        <td class="img"><img src="thumb.gif"></td>
+                        <td class="info_con2">
+                            <h1>About me</h1>
+                            <div class="line"></div>
+                            <div class="center">
+                                <p>・13y/o,中2/atcoder</p>
+                                <p>・HTML/CSS/Javascript/Python</p>
+                                <p>・Raspberry Pi</p>
+                                <p>・Azureを利用したAi開発</p>
+                        </div>
+                        </td>
+                        <td class="info" id="about">-01-<br>About</td>
+                    </tr>
+                </table>
+            </div>
             <div class="projects"></div>
             <div class="history"></div>
             <div class="contact"></div>
         </div>
+        <script src="main.js"></script>
         <script src="intro.js"></script>
     </body>
 </html>
