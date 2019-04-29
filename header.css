@@ -57,8 +57,13 @@ div.menu div.anker a{
     text-decoration: none;
     opacity: 0;
     padding: 0px 50px;
+    text-shadow: 0px 0px 0px #ffffff;
+    transition: text-shadow .4s ease-in-out;
 }
-
+div.menu div.anker a:hover{
+    text-shadow: 0px 0px 30px #ffffff;
+    transition: text-shadow .4s ease-in-out;
+}
 .about{animation: anker 800ms 7000ms ease-in-out forwards;}
 .projects {animation: anker 800ms 7100ms ease-in-out forwards;}
 .history {animation: anker 800ms 7200ms ease-in-out forwards;}
