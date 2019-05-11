@@ -5,6 +5,9 @@ body,h1,div,td,tr,tbody{
 h1:not(.name){
     font-family: 'Poiret One',cursive;
 }
+table{
+    margin:0 auto;
+}
 body::-webkit-scrollbar{
     width: 15px;
     background-color:#ffffff;
@@ -25,14 +28,21 @@ div.news{
     overflow: hidden;
 }
 div.about{
-    background: repeating-linear-gradient(135deg, #191122, #191122 10px, #110315 0, #110315 50px);
+    background: repeating-linear-gradient(45deg, #191122, #191122 10px, #110315 0, #110315 50px);
     opacity: 0;
     animation: mainc 2000ms 2250ms ease forwards;
     height: 319px;
     overflow: hidden;
 }
-div.center{
-    text-align: center;
+div.projects {
+    background: repeating-linear-gradient(225deg, #27141d, #27141d 10px, #180511 0, #180511 50px);
+    opacity: 0;
+    animation: mainc 2000ms 2500ms ease forwards;
+    height: 319px;
+    overflow: hidden;
+}
+div.projects p{
+    margin-top: 50px;
 }
 .right{
     float: right;
@@ -43,7 +53,6 @@ table{
 td.info{
     font-family: 'Megrim',cursive;
     text-align: center;
-    font-size:60px;
     width:240px;
     height:240px;
     position: relative;
@@ -60,10 +69,17 @@ td.info{
 td#update{
     color:#000000;
     text-shadow:0px 0px 10px #00000094;
+    font-size:60px;
 }
 td#about{
     color:#2f88fc;
     text-shadow:0px 0px 10px #2f88fc94;
+    font-size:60px;
+}
+td#projects{
+    color:#fc2f88;
+    text-shadow:0px 0px 10px #fc2f88cc;
+    font-size:55px;
 }
 td.info#update:hover{
     color: #00000090;
@@ -71,6 +87,10 @@ td.info#update:hover{
 }
 td.info#about:hover {
     color: #2f88fc90;
+    transition: color .2s ease-in-out;
+}
+td.info#projects:hover {
+    color: #fc2f8890;
     transition: color .2s ease-in-out;
 }
 
@@ -104,6 +124,25 @@ td.img{
     transition: background-color .3s ease-in-out;
 }
 
+td.pro_thumb{
+    font-family: 'Megrim',cursive;
+    
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    width:10px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    opacity: 0;
+    background-color:#ffffff;
+    animation: news 1200ms 2000ms ease-in-out forwards;
+    transition: color .2s linear;
+}
 img{
     -webkit-filter: drop-shadow(0px 3px 10px #4de4ffcc);
     transition: -webkit-filter .3s ease-in-out;
