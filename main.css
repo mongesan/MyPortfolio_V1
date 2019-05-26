@@ -24,25 +24,51 @@ div.news{
     height:319px;
     background: repeating-linear-gradient(45deg, #091528, #091528 10px, #050520 0, #050520 50px);
     opacity: 0;
-    animation: mainc 2000ms 2000ms ease forwards;
+    animation: main1 2000ms 2000ms ease forwards;
     overflow: hidden;
 }
 div.about{
-    background: repeating-linear-gradient(45deg, #191122, #191122 10px, #110315 0, #110315 50px);
+    background: repeating-linear-gradient(0deg, #191122, #191122 10px, #110315 0, #110315 50px);
     opacity: 0;
-    animation: mainc 2000ms 2250ms ease forwards;
+    animation: main2 2000ms 2250ms ease forwards;
     height: 319px;
     overflow: hidden;
 }
 div.projects {
-    background: repeating-linear-gradient(225deg, #27141d, #27141d 10px, #180511 0, #180511 50px);
+    background: #180511;
+    background-image: radial-gradient(#27141d 10%, transparent 20%),
+    radial-gradient(#27141d 20%, transparent 20%);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: 50px 50px;
     opacity: 0;
-    animation: mainc 2000ms 2500ms ease forwards;
-    height: 319px;
+    height: 638px;
     overflow: hidden;
+    animation: mainc 2000ms 2500ms ease forwards;
+}
+div.projects table{
+    margin-top: 50px;
 }
 div.projects p{
     margin-top: 50px;
+}
+div.protables{
+    margin-right: 80px;
+    margin-left: 80px;
+    height: 250px;
+    border-top: 2px solid #ffffffa5;
+    border-left: 2px solid #ffffffa5;
+    border-bottom: 2px dashed #ffffff20;
+    border-right: 2px dashed #ffffff20;
+}
+span.thumbs{
+    display: inline-block;
+    border-top: 1px solid #ffffffa5;
+    border-left: 1px solid #ffffffa5;
+    border-bottom: 1px dashed #ffffff20;
+    border-right: 1px dashed #ffffff20;
+    width: 200px;
+    height: 160px;
 }
 .right{
     float: right;
@@ -123,26 +149,6 @@ td.img{
     animation: news 1200ms 2000ms ease-in-out forwards;
     transition: background-color .3s ease-in-out;
 }
-
-td.pro_thumb{
-    font-family: 'Megrim',cursive;
-    
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-    width:10px;
-    height: 150px;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 40px;
-    opacity: 0;
-    background-color:#ffffff;
-    animation: news 1200ms 2000ms ease-in-out forwards;
-    transition: color .2s linear;
-}
 img{
     -webkit-filter: drop-shadow(0px 3px 10px #4de4ffcc);
     transition: -webkit-filter .3s ease-in-out;
@@ -184,11 +190,34 @@ a#twitter:hover {
     100%{opacity: 1;
     transform: scale(1)}
 }
-@keyframes mainc{
+@keyframes main1{
+    0% {
+        opacity: 0;
+        background-position-x: 0px;
+
+    }
+
+    100% {
+        opacity: 1;
+        background-position-x: 400px;
+    }
+}
+@keyframes main2{
     0%{
         opacity: 0;
+        background-position-y: 0px;
+
     }
     100%{
+        opacity: 1;
+        background-position-y: -319px;
+    }
+}
+@keyframes mainc{
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
