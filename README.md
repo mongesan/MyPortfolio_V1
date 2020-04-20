@@ -1,4 +1,2 @@
 # mongesan.github.io
-connichiha~  
-Hello world!  
-This is mongesan.(tabun.)
+My portfolio v1.0
